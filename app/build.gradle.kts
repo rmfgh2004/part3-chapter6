@@ -62,6 +62,8 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.10.1")
     implementation("com.google.dagger:hilt-android:2.44.2")
     kapt("com.google.dagger:hilt-compiler:2.44.2")
+
+    implementation("io.coil-kt:coil:2.2.2")
 }
 
 kapt {
