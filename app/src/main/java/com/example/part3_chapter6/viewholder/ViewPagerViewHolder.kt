@@ -1,5 +1,6 @@
 package com.example.part3_chapter6.viewholder
 
+import android.util.Log
 import com.example.part3_chapter6.ListAdapter
 import com.example.part3_chapter6.databinding.ItemViewpagerBinding
 import com.example.part3_chapter6.model.ListItem

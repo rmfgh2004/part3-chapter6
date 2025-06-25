@@ -1,6 +1,6 @@
 package com.example.part3_chapter6.di
 
-import com.example.part3_chapter6.MainService
+import com.example.part3_chapter6.remote.MainService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

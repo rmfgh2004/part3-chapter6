@@ -1,5 +1,8 @@
 package com.example.part3_chapter6.di
 
+import com.example.part3_chapter6.BuildConfig
+import com.example.part3_chapter6.model.ListItem
+import com.example.part3_chapter6.remote.ListItemDeserializer
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -20,6 +23,7 @@ object RetrofitModule {
     fun providesConverterFactory() : GsonConverterFactory {
         return GsonConverterFactory.create(
             GsonBuilder()
+                .registerTypeAdapter(ListItem::class.java, ListItemDeserializer())
                 .create()
         )
     }
@@ -41,7 +45,7 @@ object RetrofitModule {
         gsonConverterFactory: GsonConverterFactory
     ) : Retrofit {
         return Retrofit.Builder()
-            .baseUrl("${BuildConfig.}/api/v1/fastcampus/")
+            .baseUrl("${BuildConfig.API_BASE_URL}/api/v1/fastcampus/")
             .addConverterFactory(gsonConverterFactory)
             .client(client.build())
             .build()

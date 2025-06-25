@@ -1,4 +1,4 @@
-package com.example.part3_chapter6
+package com.example.part3_chapter6.remote
 
 import com.example.part3_chapter6.model.NetworkResponse
 import retrofit2.http.GET
